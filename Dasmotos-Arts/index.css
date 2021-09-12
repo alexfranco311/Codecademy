@@ -10,8 +10,30 @@ Header h1 {
     background-image: url(https://content.codecademy.com/courses/freelance-1/unit-2/pattern.jpeg);
 }
 
-#brushes h2 {
+h2 {
     font-size: 32px;
     font-weight: bold;
+    color: white;
+}
+
+#brushes h2 {
     background-color: mediumspringgreen;
+}
+
+#frames h2 {
+    background-color: lightcoral;
+}
+
+#paint h2 {
+    background-color: skyblue;
+}
+
+mark.blue {
+    color: blue;
+    background: none; 
+    font-weight: bold;
+}
+
+footer {
+    text-align: end;
 }
