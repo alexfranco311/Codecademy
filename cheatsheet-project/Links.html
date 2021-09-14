@@ -5,15 +5,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/cheatsheet-project/resources/css/Links.css" rel="stylesheet">
+    <div class="gradient"></div>
     <title>HTML Links Cheatsheet</title>
 </head>
+
+
+<!--To use < "&lt;" and to use > "&gt;"-->
 
 <header>
     <h1>HTML Links Cheatsheet</h1>
 </header>
 
 <body>
-    
+    <Section class="syntax">
+        <h2>Syntax</h2>
+        <p>The HTML &lt;a&gt; tag defines a hyperlink, the syntax is: 
+            <br><mark>&lt;a href="<em>url</em>"&gt;text
+            used for link"&lt;/a&gt;</mark></p>
+    </Section>
+    <section class="attributes">
+        <h2>HTML Target Attributes</h2>
+        <table>
+            <tr>
+                <th>Attributes</th>
+                <th>Value</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>target</td>
+                <td>_self</td>
+                <td>Default. Opens the document in the same window/tab as it was clicked</td>
+            </tr>
+            <tr>
+                <td>target</td>
+                <td>_blank</td>
+                <td>Opens the document in a new window or tab</td>
+            </tr>
+            <tr>
+                <td>target</td>
+                <td>_parent</td>
+                <td>Opens the document in the parent frame</td>
+            </tr>
+            <tr>
+                <td>target</td>
+                <td>_top</td>
+                <td>Opens the document in the full body of the window</td>
+            </tr>
+        </table>
+    </section>
+    <Section class="url">
+        <h2>URLs</h2>
+        <p>There are two types of urls that can be used within links on HTML. <br>
+            Absolute URLs: link to a Webpage:</p>
+            <p class="tab"><mark>&lt;a href="https://www.codecademy.com"&gt;Codecademy&lt;/a&gt;</mark></p>
+            <p>Relative URLs: link to a local page</p>
+            <p class="tab"><mark>&lt;a href="/resources/css/index.css"&gt;Index CSS file&lt;/a&gt;</mark></p>
+    </Section>
 </body>
 
 </html>
+
