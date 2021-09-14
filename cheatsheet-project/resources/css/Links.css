@@ -1,3 +1,41 @@
 * {
     font-family: monospace;
 }
+
+html {
+    height: 100%;
+    background-color: #ff8a00;
+    background-image: linear-gradient(to left top,#ff8a00, #e52e71);
+
+}
+
+header {
+    text-align: center;
+    color: blueviolet;
+    font-size: 25px;
+}
+
+body h2 {
+    text-align: center;
+    font-size: 30px;
+}
+
+p {
+    text-align: center;
+    font-size: 17px;
+}
+
+section.attributes table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+mark {
+    background-color: transparent;
+    color: gold;
+}
+
+.tab { 
+    margin-left: 40px; 
+}
