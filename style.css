@@ -7,7 +7,18 @@ header h1 {
     background-color: khaki;
 }
 
+nav {
+    position: sticky;
+    float: left;
+    z-index: 0;
+}
+
 body h1 {
     color: seagreen;
     font-family: 'Bangers', cursive, monospace;
+}
+
+footer li {
+    display: inline-block;
+    width: 80px;
 }
