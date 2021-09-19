@@ -1,3 +1,9 @@
+/*Global*/
+* {
+    box-sizing: border-box;
+}
+
+/*Main*/
 header h1 {
     color: olivedrab;
     font-weight: bolder;
@@ -21,4 +27,42 @@ body h1 {
 footer li {
     display: inline-block;
     width: 80px;
+}
+
+/*Interactive Elements*/
+a {
+    color: #466995;
+    text-decoration: underline;
+    cursor: pointer;
+}  
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    color: #25ccb6;
+}
+
+a:visited {
+    color: #464795;
+}
+
+.button {
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0px 5px;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: indianred;
+}
+
+.button:active {
+    margin-top: 5px;
+    color: grey;
+    box-shadow: 0px 0px;
 }
