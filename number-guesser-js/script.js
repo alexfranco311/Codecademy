@@ -8,36 +8,30 @@ let generateTarget = () => {
 };
     //console.log(generateTarget()); //test
 
-let humanNum = '';
-let computerNum = generateTarget();
-let targetNumber = generateTarget();
-
-    //console.log(`Human # =${humanNum}. Computer # =${computerNum}. Target # =${targetNumber}.`); //test
-
-let compareGuesses = (humanNum, computerNum) => {
-    if((Math.abs(humanNum - targetNumber)) <= (Math.abs(computerNum - targetNumber))) {
-        
+let compareGuesses = (humanNum, computerNum, target) => {
+    let humanSum = Math.abs(humanNum - target);
+    let computerSum = Math.abs(computerNum - target);
+    console.log(humanSum, computerSum);
+    if(humanSum <= computerSum) {
         return true;  
     } else {
         return false;
     }
 };
+    //console.log(`Human # =${humanNum}. Computer # =${computerNum}. Target # =${target}.`); //test
     //console.log(compareGuesses(humanNum, computerNum)); //test
 
-let updateScore = () => {
-    if(compareGuesses(humanNum, computerNum) === true) {
+let updateScore = (winner) => {
+    if(winner === 'human') {
         humanScore++;
-    } else if(compareGuesses(humanNum, computerNum) === false) {
+    } else {
         computerScore++;
     }; 
 };
 
 let advanceRound = () => {
     currentRoundNumber +=1;
-    //for (i = 1; i < currentRoundNumber; i++);
-    
 };
-
     // updateScore();
     // advanceRound();
     // console.log(`Human Score: ${humanScore}. Computer Score: ${computerScore}. Round # ${currentRoundNumber}.`); //test
