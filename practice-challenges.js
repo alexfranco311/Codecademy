@@ -116,22 +116,148 @@ const sortYears = (years) => {
 
 const years = [1970, 1999, 1951, 1982, 1963, 2011, 2018, 1922]
 
-console.log(sortYears(years))
+console.log(sortYears(years));
 // Should print [ 2018, 2011, 1999, 1982, 1970, 1963, 1951, 1922 ]
 
 console.log('------------------------------------------------');
 
+const justCoolStuff = (arr1, arr2) => {
+  let arr3 = arr1.filter(item => arr2.includes(item));
+     return arr3
+}
+
+const coolStuff = ['gameboys', 'skateboards', 'backwards hats', 'fruit-by-the-foot', 'pogs', 'my room', 'temporary tattoos'];
+
+const myStuff = [ 'rules', 'fruit-by-the-foot', 'wedgies', 'sweaters', 'skateboards', 'family-night', 'my room', 'braces', 'the information superhighway']; 
+
+console.log(justCoolStuff(myStuff, coolStuff));
+// Should print [ 'fruit-by-the-foot', 'skateboards', 'my room' ]
 
 console.log('------------------------------------------------');
 
+const isTheDinnerVegan = (arr) => {
+  if(arr.every(green => green.source === "plant")){
+    return true;
+  } else return false;
+};
+
+const dinner = [{name: 'hamburger', source: 'meat'}, {name: 'cheese', source: 'dairy'}, {name: 'ketchup', source:'plant'}, {name: 'bun', source: 'plant'}, {name: 'dessert twinkies', source:'unknown'}];
+
+console.log(isTheDinnerVegan(dinner));
+// Should print false
 
 console.log('------------------------------------------------');
 
+const speciesArray = [ {speciesName:'shark', numTeeth:50}, {speciesName:'dog', numTeeth:42}, {speciesName:'alligator', numTeeth:80}, {speciesName:'human', numTeeth:32}];
+
+const sortSpeciesByTeeth = (arr) => {
+  arr.sort((a, b) => {return a.numTeeth - b.numTeeth;
+    }
+  ); return arr
+};
+
+console.log(sortSpeciesByTeeth(speciesArray));
+
+// Should print:
+// [ { speciesName: 'human', numTeeth: 32 },
+//   { speciesName: 'dog', numTeeth: 42 },
+//   { speciesName: 'shark', numTeeth: 50 },
+//   { speciesName: 'alligator', numTeeth: 80 } ]
 
 console.log('------------------------------------------------');
 
+const findMyKeys = (arr) => {
+  let i = arr.findIndex(item => item === 'keys');
+  return i
+ };
+
+const randomStuff = ['credit card', 'screwdriver', 'receipt', 'gum', 'keys', 'used gum', 'plastic spoon'];
+
+console.log(findMyKeys(randomStuff))
+// Should print 4
+
+console.log('---------------FINAL---LEVEL--------------------');
+
+// Write your code here:
+const dogFactory = (n, b, w) => {
+  let name = n;
+  let breed = b;
+  let weight = w;
+  return {name: name, breed: breed, weight: weight}
+};
+
+console.log(dogFactory('spot', 'pit', 40));//test
 
 console.log('------------------------------------------------');
 
+const factorial = (num) => {
+  if (num === 0 || num === 1)
+  return 1;
+  for(let i = num - 1; i >= 1; i--) {
+     num = num * i;
+  } return num
+};
+console.log(factorial(6));
+//Prints out 720
 
 console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+
+console.log(subLength('Saturday', 'a')); // returns 6 
+console.log(subLength('summer', 'm')); // returns 2
+console.log(subLength('digitize', 'i')); // returns 0
+console.log(subLength('cheesecake', 'k')); // returns 0
+
+
+if(str.count(char) < 2 || str.count(char) > 2) {
+  return 0;
+};
+
+//
+
+const subLength = (str, char) => {
+  let cancel = new Array;
+  cancel = str.match(/char/g).length;
+  if(cancel <= 1 || cancel >= 3) {
+    return 0;
+  } else {
+      let index1 = str.indexOf(char);
+      let index2 = str.lastIndexOf(char);
+      let absVal = new Array(index1, index2);
+      const diff = (a, b) => {
+      return Math.abs((a - b) - 1);
+      }
+    return diff(absVal[0], absVal[1]);
+  }  
+};
+console.log(subLength('digitize', 'i')); // returns 0
+console.log(cancel);
+
+//
+
+let str = 'digitize'
+let char = 'i'
+let search = /[char]/g;
+let cancel = new Array;
+cancel = str.match(char).length;
+
+console.log(cancel);
+console.log(str.match(char));
