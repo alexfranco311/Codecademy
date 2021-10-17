@@ -201,41 +201,9 @@ console.log(factorial(6));
 //Prints out 720
 
 console.log('------------------------------------------------');
-console.log('------------------------------------------------');
-console.log('------------------------------------------------');
-console.log('------------------------------------------------');
-console.log('------------------------------------------------');
-console.log('------------------------------------------------');
-console.log('------------------------------------------------');
-console.log('------------------------------------------------');
-console.log('------------------------------------------------');
-console.log('------------------------------------------------');
-console.log('------------------------------------------------');
-console.log('------------------------------------------------');
-console.log('------------------------------------------------');
-console.log('------------------------------------------------');
-console.log('------------------------------------------------');
-console.log('------------------------------------------------');
-console.log('------------------------------------------------');
-console.log('------------------------------------------------');
-console.log('------------------------------------------------');
-console.log('------------------------------------------------');
-
-console.log(subLength('Saturday', 'a')); // returns 6 
-console.log(subLength('summer', 'm')); // returns 2
-console.log(subLength('digitize', 'i')); // returns 0
-console.log(subLength('cheesecake', 'k')); // returns 0
-
-
-if(str.count(char) < 2 || str.count(char) > 2) {
-  return 0;
-};
-
-//
 
 const subLength = (str, char) => {
-  let cancel = new Array;
-  cancel = str.match(/char/g).length;
+  let cancel = str.split('').map(i => !!~i.indexOf(char)).filter(i => i).length;
   if(cancel <= 1 || cancel >= 3) {
     return 0;
   } else {
@@ -248,16 +216,42 @@ const subLength = (str, char) => {
     return diff(absVal[0], absVal[1]);
   }  
 };
+
+console.log(subLength('Saturday', 'a')); // returns 6 
+console.log(subLength('summer', 'm')); // returns 2
 console.log(subLength('digitize', 'i')); // returns 0
-console.log(cancel);
+console.log(subLength('cheesecake', 'k')); // returns 0
 
-//
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
 
-let str = 'digitize'
-let char = 'i'
-let search = /[char]/g;
-let cancel = new Array;
-cancel = str.match(char).length;
+//last challenege
+//Write a function groceries() that takes an array of object literals of grocery items. The function should return a string with each item separated by a comma except the last two items should be separated by the word 'and'. Make sure spaces (' ') are inserted where they are appropriate.
 
-console.log(cancel);
-console.log(str.match(char));
+Examples:
+
+groceries( [{item: 'Carrots'}, {item: 'Hummus'}, {item: 'Pesto'}, {item: 'Rigatoni'}] );
+// returns 'Carrots, Hummus, Pesto and Rigatoni'
+ 
+groceries( [{item: 'Bread'}, {item: 'Butter'}] );
+// returns 'Bread and Butter'
+ 
+groceries( [{item: 'Cheese Balls'}] );
+// returns 'Cheese Balls'
