@@ -244,6 +244,15 @@ console.log('------------------------------------------------');
 
 //last challenege
 //Write a function groceries() that takes an array of object literals of grocery items. The function should return a string with each item separated by a comma except the last two items should be separated by the word 'and'. Make sure spaces (' ') are inserted where they are appropriate.
+const test = [{item: 'Carrots'}, {item: 'Hummus'}, {item: 'Pesto'}, {item: 'Rigatoni'}]
+
+const groceries = (arr) => {
+  for (let i = 0; i < arr.length; i++) { 
+  console.log(arr[i].item + ', ')
+  };
+}
+
+console.log(groceries(test));
 
 Examples:
 
