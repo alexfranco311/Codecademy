@@ -223,36 +223,24 @@ console.log(subLength('digitize', 'i')); // returns 0
 console.log(subLength('cheesecake', 'k')); // returns 0
 
 console.log('------------------------------------------------');
-console.log('------------------------------------------------');
-console.log('------------------------------------------------');
-console.log('------------------------------------------------');
-console.log('------------------------------------------------');
-console.log('------------------------------------------------');
-console.log('------------------------------------------------');
-console.log('------------------------------------------------');
-console.log('------------------------------------------------');
-console.log('------------------------------------------------');
-console.log('------------------------------------------------');
-console.log('------------------------------------------------');
-console.log('------------------------------------------------');
-console.log('------------------------------------------------');
-console.log('------------------------------------------------');
-console.log('------------------------------------------------');
-console.log('------------------------------------------------');
-console.log('------------------------------------------------');
-console.log('------------------------------------------------');
 
-//last challenege
 //Write a function groceries() that takes an array of object literals of grocery items. The function should return a string with each item separated by a comma except the last two items should be separated by the word 'and'. Make sure spaces (' ') are inserted where they are appropriate.
 const test = [{item: 'Carrots'}, {item: 'Hummus'}, {item: 'Pesto'}, {item: 'Rigatoni'}]
 
-const groceries = (arr) => {
-  for (let i = 0; i < arr.length; i++) { 
-  console.log(arr[i].item + ', ')
-  };
-}
+const groceries = list => {
+  let listString = ''
 
-console.log(groceries(test));
+  for (let i=0; i<list.length; i++) {
+    listString += list[i].item;
+    if (i < list.length - 2) {
+      listString += ', ';
+    } else if (i == list.length - 2){
+      listString += ' and ';
+    }
+  }
+  
+  return listString;
+}
 
 Examples:
 
@@ -264,3 +252,22 @@ groceries( [{item: 'Bread'}, {item: 'Butter'}] );
  
 groceries( [{item: 'Cheese Balls'}] );
 // returns 'Cheese Balls'
+
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
+console.log('------------------------------------------------');
