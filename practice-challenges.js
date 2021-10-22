@@ -254,6 +254,50 @@ groceries( [{item: 'Cheese Balls'}] );
 // returns 'Cheese Balls'
 
 console.log('------------------------------------------------');
+/*the following two methods acchieve the same result by passing 8 different test.
+Description: The next number method we will implement is .inRange(). 
+Here is a summary of the method:
+-.inRange() takes three arguments: a number, a start value, and an end value
+-.inRange() checks to see if the provided number falls within the range specified by the start and end values
+-If the provided number is smaller than the start value, .inRange() will return false
+-If the provided number is larger than or equal to the end value, .inRange() will return false
+-If the provided number is within the start and end values, .inRange() will return true
+-If no end value is provided to the method, the start value will be 0 and the end value will be the provided start value
+-If the provided start value is larger than the provided end value, the two values should be swapped */
+
+//1 -  What i came up with based on the task
+const inRange = (number, start, end) => {
+  if(number === end){
+      return false
+  } else if(end === undefined){
+      end = start;
+      start = 0;
+      return true
+  } else if(start > end) {
+      temp = end; 
+      start = temp;
+      end = start;
+      return true
+  } else if(number < start || number > end){
+      return false
+  } else if(number >= start || number < end){
+      return true
+  }
+};
+//2 - Result of following Codecademy's "guided" process
+const inRange = (number, start, end) => {
+  if(end === undefined){
+    end = start;
+    start = 0;
+  } else if(start > end){
+    temp = end;
+    end = start;
+    start = temp;
+  };
+  let isInRange = (start <= number && number < end);
+  return isInRange();
+}
+
 console.log('------------------------------------------------');
 console.log('------------------------------------------------');
 console.log('------------------------------------------------');
