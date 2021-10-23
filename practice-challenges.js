@@ -296,9 +296,14 @@ const inRange = (number, start, end) => {
   };
   let isInRange = (start <= number && number < end);
   return isInRange();
-}
+};
 
 console.log('------------------------------------------------');
+
+const words = (string) => {
+  return string.split(' '); 
+}
+
 console.log('------------------------------------------------');
 console.log('------------------------------------------------');
 console.log('------------------------------------------------');
