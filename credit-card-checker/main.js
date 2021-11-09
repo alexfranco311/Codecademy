@@ -39,7 +39,32 @@ const validateCred = (array) => {
     let num = validation.reduce((a, b) => a + b) % 10;
     if(num === 0){
       return true
-    } else return false
+    }
 };
 
-console.log(validateCred(valid1));
+
+//console.log(validateCred(valid1));
+
+const findInvalidCards = (array) => {
+    let invalid = [];
+    for(let i = 0; i < array.length; i ++){
+        if(validateCred(array[i]) !== true){
+            invalid.push(array[i])
+            }
+     }; 
+     return invalid
+};
+
+//console.log(findInvalidCards(batch));
+
+const idInvalidCardCompanies = (array) => {
+    let cardCompanies = [];
+    for(let i = 0; i < array.length; i ++){
+        if(array[i].lastIndexOf(3) === array.length + 1){
+            cardCompanies.push('Amex')
+            }
+    }; 
+    return cardCompanies
+};
+
+console.log(idInvalidCardCompanies(batch));
