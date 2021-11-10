@@ -62,9 +62,20 @@ const idInvalidCardCompanies = (array) => {
     for(let i = 0; i < array.length; i ++){
         if(array[i].lastIndexOf(3) === array.length + 1){
             cardCompanies.push('Amex')
-            }
-    }; 
-    return cardCompanies
+        } else if(array[i].lastIndexOf(4) === array.length + 1){
+            cardCompanies.push('Visa')
+        } else if(array[i].lastIndexOf(5) === array.length + 1){
+            cardCompanies.push('Mastercard')
+        }else if(array[i].lastIndexOf(6) === array.length + 1){
+            cardCompanies.push('Discover')
+        }
+    }return cardCompanies
 };
 
 console.log(idInvalidCardCompanies(batch));
+
+
+// 3 = amex
+// 4 = visa
+// 5 = mastercard
+// 6 = discover
