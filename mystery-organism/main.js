@@ -14,11 +14,13 @@ const mockUpStrand = () => {
 };
 
 function pAequorFactory(num, array){
-
+  return{
+    specimenNum: num,
+    dna: array,
+    mutate(){
+      
+    }
+  }
 }
 
-
-
-
-
-
+console.log(pAequorFactory(1, mockUpStrand()).mutate())

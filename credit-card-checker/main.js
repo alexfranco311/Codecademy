@@ -44,9 +44,9 @@ const validateCred = (array) => {
 
 
 //console.log(validateCred(valid1));
-
+let invalid = [];
 const findInvalidCards = (array) => {
-    let invalid = [];
+    
     for(let i = 0; i < array.length; i ++){
         if(validateCred(array[i]) !== true){
             invalid.push(array[i])
@@ -56,6 +56,7 @@ const findInvalidCards = (array) => {
 };
 
 //console.log(findInvalidCards(batch));
+findInvalidCards(batch);
 
 const idInvalidCardCompanies = (array) => {
     let cardCompanies = [];
@@ -72,10 +73,10 @@ const idInvalidCardCompanies = (array) => {
     }return cardCompanies
 };
 
-console.log(idInvalidCardCompanies(batch));
+console.log(idInvalidCardCompanies(invalid));
 
 
 // 3 = amex
 // 4 = visa
 // 5 = mastercard
-// 6 = discover
+// 6 = discover 
